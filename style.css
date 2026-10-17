@@ -1,0 +1,33 @@
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;overflow:hidden;font-family:"Poppins","Segoe UI",system-ui,-apple-system,Roboto,sans-serif;color:#fff8ec;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+#bg{position:fixed;inset:0;background:radial-gradient(120% 90% at 50% 40%,#5a3a22 0%,#2a1a0f 60%,#140b06 100%);z-index:-2}
+#c{position:fixed;inset:0;width:100%;height:100%;display:block;z-index:0}
+#c+*{}
+#top{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:calc(env(safe-area-inset-top) + 10px) 12px 8px;gap:8px;z-index:2;background:linear-gradient(rgba(20,11,6,.75),rgba(20,11,6,0))}
+.brand{font-family:"Cinzel",serif;font-weight:900;font-size:19px;letter-spacing:2px;white-space:nowrap;background:linear-gradient(#fff3c4,#e2b04a 55%,#a8741f);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 1px 1px rgba(0,0,0,.6))}
+.brand span{color:transparent}
+.glass,.pill,.icon,.pl,#msg{background:rgba(255,248,236,.10);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(226,176,74,.45);box-shadow:0 6px 18px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.15)}
+.pill{display:flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;font-size:13px;font-weight:600;white-space:nowrap}
+.pill i{width:12px;height:12px;border-radius:50%;background:#d0262b;box-shadow:0 0 0 2px rgba(255,255,255,.7),0 2px 4px rgba(0,0,0,.4)}
+.icon{color:#fff;width:40px;height:40px;border-radius:12px;font-size:17px}
+#players{position:fixed;left:0;right:0;top:calc(env(safe-area-inset-top) + 62px);display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:0 10px;z-index:2}
+.pl{display:flex;align-items:center;gap:5px;border-radius:10px;padding:5px 7px;font-size:11px;font-weight:500;transition:all .25s;white-space:nowrap;overflow:hidden}
+.pl i{width:10px;height:10px;border-radius:50%;flex:none;box-shadow:0 0 0 1.5px rgba(255,255,255,.7)}
+.pl span{flex:1;overflow:hidden;text-overflow:ellipsis}
+.pl em{font-style:normal;opacity:.85;font-weight:600}
+.pl.active{background:rgba(226,176,74,.28);border-color:#f0c869;transform:translateY(-2px)}
+.p0 i{background:#d0262b}.p1 i{background:#23963f}.p2 i{background:#f2b90c}.p3 i{background:#1c64c8}
+#msg{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(env(safe-area-inset-bottom) + 92px);padding:8px 16px;border-radius:12px;font-size:13px;font-weight:500;z-index:2;text-align:center;max-width:92%;pointer-events:none}
+#bottom{position:fixed;left:0;right:0;bottom:0;display:flex;justify-content:center;padding:10px 12px calc(env(safe-area-inset-bottom) + 18px);z-index:2}
+.btn{font-family:"Poppins",sans-serif;font-weight:700;font-size:19px;color:#3d2405;background:linear-gradient(#fff1bf 0%,#f0c869 45%,#c8922e 100%);border:1px solid #fff0c0;border-radius:16px;padding:13px 42px;box-shadow:0 5px 0 #8a5d17,0 12px 24px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.8);letter-spacing:.3px;transition:transform .08s,filter .2s,opacity .2s}
+.btn:active{transform:translateY(3px);box-shadow:0 2px 0 #8a5d17,0 6px 14px rgba(0,0,0,.4)}
+.btn:disabled{filter:grayscale(.7) brightness(.8);opacity:.6}
+.btn.pulse:not(:disabled){animation:pulse 1.2s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.05)}}
+#overlay{position:fixed;inset:0;background:rgba(15,8,3,.55);backdrop-filter:blur(5px);display:flex;align-items:center;justify-content:center;z-index:5;transition:opacity .3s}
+#overlay.hidden{opacity:0;pointer-events:none}
+.card{background:linear-gradient(160deg,rgba(255,248,236,.16),rgba(255,248,236,.06));backdrop-filter:blur(12px);border:1px solid rgba(240,200,105,.7);border-radius:24px;padding:28px 30px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.55);min-width:260px}
+#trophy{font-size:62px;animation:bob 1.6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-6px)}}
+.card h1{font-family:"Cinzel",serif;font-size:32px;margin:6px 0;background:linear-gradient(#fff3c4,#e2b04a 60%,#a8741f);-webkit-background-clip:text;background-clip:text;color:transparent}
+.card p{opacity:.9;margin-bottom:20px}
